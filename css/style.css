@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+header{
+    background-color: rgb(135, 202, 135);
+    padding: 0.5rem 0;
+    
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-around;
+
+}
+.direita{
+ display:flex ;
+align-items: center;
+}
+
+
+
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #fafafa;
+    padding: 10px;
+    font-size: 17px;
+    font-family: Arial;
+  }
+  nav a:hover{
+   
+}

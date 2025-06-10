@@ -7,7 +7,7 @@ body{
     height:100vh;
     display: flex;
     flex-direction: column;
-    background-color: rgb(145, 180, 145);
+    background-color: #B2E2B8;
     font-family: 'DM Sans', sans-serif;
 
 }
@@ -38,13 +38,42 @@ gap: 1rem;
 
 nav a {
    text-decoration: none;
-   color: #201f1f;
+   color: #395c46;
    font-family: 'Dm Sans', sans-serif;
    font-weight: 550;
 
-
+}
   nav a:hover{
    color: #fff;
 }
 
 
+.container{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.conteudo{
+    max-width: 600px;
+    width: 100%;
+    background-color: #85c09b;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px #517563;
+}
+
+.conteudo h2{
+    font-size: 45px;
+    color: #395c46;
+    font-family:Dm Sans;
+}
+
+.conteudo p{
+    font-family: Cinzel;
+    text-align: justify;
+    font-size: 25px;
+    color:#314e3c;
+}

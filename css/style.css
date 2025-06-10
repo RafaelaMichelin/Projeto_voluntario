@@ -1,36 +1,50 @@
-body{
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+body{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(145, 180, 145);
+    font-family: 'DM Sans', sans-serif;
 
 }
 
 header{
-    background-color: rgb(135, 202, 135);
-    padding: 0.5rem 0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    
     
 }
 
-.cabecalho{
-    display: flex;
-    justify-content: space-around;
 
+.esquerda h1{
+    font-size:2rem;
 }
-.direita{
+.direita nav{
  display:flex ;
-align-items: center;
+gap: 1rem;
+
 }
 
 
 
 
 nav a {
-    position: relative;
-    text-decoration: none;
-    color: #fafafa;
-    padding: 10px;
-    font-size: 17px;
-    font-family: Arial;
-  }
+   text-decoration: none;
+   color: #201f1f;
+   font-family: 'Dm Sans', sans-serif;
+   font-weight: 550;
+
+
   nav a:hover{
-   
+   color: #fff;
 }
+
+

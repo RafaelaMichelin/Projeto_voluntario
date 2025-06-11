@@ -48,16 +48,16 @@ nav a {
 }
 
 
-.container{
+.meu-container{
     flex:1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5rem;
     
 }
 .conteudo{
-    max-width: 600px;
+    max-width: 700px;
     width: 100%;
     background-color: #85c09b;
     padding: 2rem;
@@ -77,4 +77,25 @@ nav a {
     text-align: justify;
     font-size: 25px;
     color:#314e3c;
+}
+
+/*pagina cadastro*/
+
+.form-linha {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.form-linha label {
+  width: 200px;
+  text-align: right;
+  font-weight: 600;
+}
+
+.form-linha input,
+.form-linha select,
+.form-linha textarea {
+  flex: 1;
 }

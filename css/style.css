@@ -112,3 +112,13 @@ display: block;
   flex: 1;
 }
 
+
+ /*RODAPÉ*/
+    footer{
+    text-align: center;
+    background-color:#eb6b2f;
+    color: #fff;
+    padding: 0.5rem 0;
+  
+}
+

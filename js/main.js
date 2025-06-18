@@ -1,5 +1,5 @@
 'use strict';
-
+ 
 //Conferir se todos os campos obrigatórios estão preenchidos
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('form');
@@ -77,4 +77,7 @@ const limparFormulario = () => {
   document.getElementById('estado').value = '';
 };
 
+
+
 document.getElementById('cep').addEventListener('focusout', pesquisarCep);
+

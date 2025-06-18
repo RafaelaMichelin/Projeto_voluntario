@@ -5,10 +5,87 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Necessidades</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <script src='js/main.js'></script>
+
+
+    <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .card {
+            width: 18rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card-body {
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    
-</body>
+
+    <header class="cabecalho">
+        <div class="esquerda">
+            <h1>UniCausa</h1>
+        </div>
+        <div class="direita">
+            <nav>
+                <a href="index.html">Página Inicial</a>
+                <a href="cadastro.html">Cadastro de ONG</a>
+                <a href="view.html">Ver Necessidades</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="meu-container">
+    <div class="container">
+        <h1 class="text-center my-4">Necessidades Cadastradas</h1>
+        <div id="cards" class="card-container"></div>
+    </div>
+</div>
+<script>
+window.onload = function () {
+    const dados = JSON.parse(localStorage.getItem('dadosFormulario'));
+    const container = document.getElementById('cards');
+
+    if (dados) {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML = `
+            <div class="card-header">${dados.titulo}</div>
+            <div class="card-body">
+                <p><strong>Instituição:</strong> ${dados.nome}</p>
+                <p><strong>Tipo de Ajuda:</strong> ${dados.opcaoAjuda}</p>
+                <p><strong>CEP:</strong> ${dados.cep}</p>
+                <p><strong>Rua:</strong> ${dados.rua}</p>
+                <p><strong>Bairro:</strong> ${dados.bairro}</p>
+                <p><strong>Cidade:</strong> ${dados.cidade}</p>
+                <p><strong>Estado:</strong> ${dados.estado}</p>
+                <p><strong>E-mail:</strong> ${dados.email}</p>
+                <p><strong>Telefone:</strong> ${dados.tel}</p>
+            </div>
+        `;
+        container.appendChild(card);
+    } else {
+        container.innerHTML = '<p class="text-center">Nenhuma necessidade cadastrada.</p>';
+    }
+};
+</script>
+
+     </body>
 </html>

@@ -32,7 +32,7 @@
             <nav>
                 <a href="index.html">Página Inicial</a>
                 <a href="cadastro.html">Cadastro de ONG</a>
-                <a href="">Ver Necessidades</a>
+                <a href="view.html">Ver Necessidades</a>
             </nav>
         </div>
     </header>
@@ -44,7 +44,7 @@
             <br>
             <form id="formcad">
                 <div class="form-linha">
-                    <label class="form-label">Nome da instituição<span style="color:red;">*</span></label>
+                    <label class="form-label">Nome<span style="color:red;">*</span></label>
                     <input type="text" name="nome" id="nome" class="form-control"
                         placeholder="Digite o nome da instituição" required>
                 </div>
@@ -107,4 +107,27 @@
         </div>
     </div>
     <script src='js/main.js'></script>
+
+<script>
+    document.getElementById('formcad').addEventListener('submit', function (e) {
+    e.preventDefault(); // Impede o envio do formulário
+
+    // Cria um objeto FormData a partir do formulário
+    const formData = new FormData(this);
+
+    // Converte os dados do FormData para um objeto
+    const dados = Object.fromEntries(formData.entries());
+
+    // Armazena os dados no localStorage
+    localStorage.setItem('dadosFormulario', JSON.stringify(dados));
+
+    // Redireciona para a página de exibição
+    window.location.href = 'view.html';
+});
+
+
+
+
+
+</script>
 </body>

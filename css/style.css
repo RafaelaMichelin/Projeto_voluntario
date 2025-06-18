@@ -53,32 +53,44 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem;
+    padding: 2.5rem;
+    gap:2rem;
     
 }
+.logo{
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+.logo img{
+
+width: 100%;
+height: auto;
+display: block;
+
+
+}
 .conteudo{
-    max-width: 700px;
-    width: 100%;
-    background-color: #85c09b;
+    flex: 2 1 400px;
+    max-width: 600px;
+    background-color: transparent;
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 10px #517563;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .conteudo h2{
-    font-size: 45px;
-    color: #395c46;
+    font-size: 40px;
+    color: #eb6b2f;
     font-family:Dm Sans;
 }
 
 .conteudo p{
     font-family: Cinzel;
     text-align: justify;
-    font-size: 25px;
+    font-size: 20px;
     color:#314e3c;
 }
-
 /*pagina cadastro*/
 
 .form-linha {
@@ -89,7 +101,7 @@ nav a {
 }
 
 .form-linha label {
-  width: 200px;
+  width: 150px;
   text-align: right;
   font-weight: 600;
 }

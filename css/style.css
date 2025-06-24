@@ -106,6 +106,7 @@ display: block;
 .conteudo:hover {
             transform: scale(1.05);
         }
+
 /*pagina cadastro*/
 
 .form-linha {
@@ -140,6 +141,23 @@ display: block;
 .search label{
     height: 20px;
 }
+
+#filterAjuda {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #ffffff;
+  font-size: 16px;
+  color: #314e3c;
+  font-family: 'DM Sans', sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+ 
+
+}
+
+
 
  /*RODAPÉ*/
     footer{

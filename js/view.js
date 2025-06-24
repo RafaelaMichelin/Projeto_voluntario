@@ -17,7 +17,7 @@ window.onload = function () {
         card.innerHTML = `
           <div class="card-header">${dados.titulo}</div>
           <div class="card-body">
-            <p><strong>Instituição:</strong> ${dados.nome}</p>
+            <p><strong>Nome:</strong> ${dados.nome}</p>
             <p><strong>Tipo de Ajuda:</strong> ${dados.opcaoAjuda}</p>
             <p><strong>CEP:</strong> ${dados.cep}</p>
             <p><strong>Rua:</strong> ${dados.rua}</p>
@@ -34,34 +34,50 @@ window.onload = function () {
   }
 
   // MÉTODO DE PESQUISA 
-  if (searchInput && cardContainer) {
-    searchInput.addEventListener('input', () => {
-      const searchTerm = searchInput.value.toLowerCase();
+ 
+    if (searchInput && filterAjuda && cardContainer) {
+  function filtrar() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const tipoSelecionado = filterAjuda.value;
 
-      const filteredData = cadastros.filter(dados =>
-        dados.titulo.toLowerCase().includes(searchTerm)
-      );
+    const filteredData = cadastros.filter(dados => {
+      const tituloMatch = dados.titulo.toLowerCase().includes(searchTerm);
+      const tipoMatch = tipoSelecionado === '' || dados.opcaoAjuda === tipoSelecionado;
+      return tituloMatch && tipoMatch;
+    });
 
-      cardContainer.innerHTML = '';
+    cardContainer.innerHTML = '';
 
-      if (filteredData.length === 0) {
-        cardContainer.innerHTML = '<p>Nenhuma necessidade encontrada.</p>';
-      } else {
-        filteredData.forEach(dados => {
-          const card = document.createElement('div');
-          card.classList.add('card');
-          card.innerHTML = `
-            <h3>${dados.titulo}</h3>
+    if (filteredData.length === 0) {
+      cardContainer.innerHTML = '<p>Nenhuma necessidade encontrada.</p>';
+    } else {
+      filteredData.forEach(dados => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML = `
+          <div class="card-header">${dados.titulo}</div>
+          <div class="card-body">
             <p><strong>Nome:</strong> ${dados.nome}</p>
             <p><strong>Tipo de Ajuda:</strong> ${dados.opcaoAjuda}</p>
             <p><strong>Descrição:</strong> ${dados.mensagem || ''}</p>
-            <p><strong>Local:</strong> ${dados.rua}, ${dados.bairro}, ${dados.cidade} - ${dados.estado}</p>
-            <p><strong>Contato:</strong> ${dados.email} | ${dados.tel}</p>
-          `;
-          cardContainer.appendChild(card);
-        });
-      }
-    });
+            <p><strong>Cidade:</strong> ${dados.cidade}</p>
+            <p><strong>Estado:</strong> ${dados.estado}</p>
+            <p><strong>E-mail:</strong> ${dados.email}</p>
+            <p><strong>Telefone:</strong> ${dados.tel}</p>
+          </div>
+        `;
+        cardContainer.appendChild(card);
+      });
+    }
+  }
+
+  // Escuta a digitação na busca
+  searchInput.addEventListener('input', filtrar);
+
+  // Escuta a mudança no select de tipo
+  filterAjuda.addEventListener('change', filtrar);
+
+
   }
   
 };

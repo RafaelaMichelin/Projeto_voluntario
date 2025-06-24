@@ -28,6 +28,34 @@ document.addEventListener('DOMContentLoaded', function () {
   camposObrigatorios.forEach(campo => {
     campo.addEventListener('input', validarCampos);
   });
+  form.addEventListener('submit', function (event) {
+      let mensagemErro = '';
+
+//pegando o valor de cada campo inserido
+      const nome = document.getElementById('nome').value;
+      const opcaoAjuda = document.getElementById('opcaoAjuda').value;
+      const titulo = document.getElementById('titulo').value;
+      const email = document.getElementById('email').value;
+      const telefone = document.getElementById('tel').value;
+
+      if (!nome) mensagemErro += 'O campo Nome é obrigatório.\n';
+      if (!opcaoAjuda) mensagemErro += 'O campo Tipo de Ajuda é obrigatório.\n';
+      if (!titulo) mensagemErro += 'O campo Título é obrigatório.\n';
+
+      if (!email) {
+        mensagemErro += 'O campo E-mail é obrigatório.\n';
+      } 
+
+      if (!telefone) {
+        mensagemErro += 'O campo Telefone é obrigatório.\n';
+      }
+
+      if (mensagemErro) {
+        alert(mensagemErro);
+        event.preventDefault();
+      }
+    });
+
   
   };
 

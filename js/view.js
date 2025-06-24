@@ -33,5 +33,35 @@ window.onload = function () {
     }
   }
 
+  // MÉTODO DE PESQUISA 
+  if (searchInput && cardContainer) {
+    searchInput.addEventListener('input', () => {
+      const searchTerm = searchInput.value.toLowerCase();
+
+      const filteredData = cadastros.filter(dados =>
+        dados.titulo.toLowerCase().includes(searchTerm)
+      );
+
+      cardContainer.innerHTML = '';
+
+      if (filteredData.length === 0) {
+        cardContainer.innerHTML = '<p>Nenhuma necessidade encontrada.</p>';
+      } else {
+        filteredData.forEach(dados => {
+          const card = document.createElement('div');
+          card.classList.add('card');
+          card.innerHTML = `
+            <h3>${dados.titulo}</h3>
+            <p><strong>Nome:</strong> ${dados.nome}</p>
+            <p><strong>Tipo de Ajuda:</strong> ${dados.opcaoAjuda}</p>
+            <p><strong>Descrição:</strong> ${dados.mensagem || ''}</p>
+            <p><strong>Local:</strong> ${dados.rua}, ${dados.bairro}, ${dados.cidade} - ${dados.estado}</p>
+            <p><strong>Contato:</strong> ${dados.email} | ${dados.tel}</p>
+          `;
+          cardContainer.appendChild(card);
+        });
+      }
+    });
+  }
   
 };

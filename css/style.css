@@ -112,6 +112,19 @@ display: block;
   flex: 1;
 }
 
+/*PESQUISAR*/
+
+#searchInput{
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    width: 150px;
+    outline: none;
+}
+
+.search label{
+    height: 20px;
+}
 
  /*RODAPÉ*/
     footer{

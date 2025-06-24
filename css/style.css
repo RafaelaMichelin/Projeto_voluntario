@@ -7,7 +7,7 @@ body{
     height:100vh;
     display: flex;
     flex-direction: column;
-    background-color: #bbdabe;
+    background-color: #bbdabe !important; 
     font-family: 'DM Sans', sans-serif;
 
 }
@@ -55,6 +55,7 @@ nav a {
     align-items: center;
     padding: 2.5rem;
     gap:2rem;
+    margin-bottom: 2rem;
     
 }
 .logo{
@@ -68,6 +69,17 @@ height: auto;
 display: block;
 
 
+}
+
+.container2{
+      flex:1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+    gap: 2rem;
+    margin-bottom: 5rem; 
 }
 .conteudo{
     flex: 2 1 400px;
@@ -91,6 +103,9 @@ display: block;
     font-size: 20px;
     color:#314e3c;
 }
+.conteudo:hover {
+            transform: scale(1.05);
+        }
 /*pagina cadastro*/
 
 .form-linha {

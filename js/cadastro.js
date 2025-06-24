@@ -45,9 +45,15 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!email) {
         mensagemErro += 'O campo E-mail é obrigatório.\n';
       } 
+      else if (!validarEmail(email)) {
+        mensagemErro += 'Por favor, insira um e-mail válido.\n';
+      }
 
       if (!telefone) {
         mensagemErro += 'O campo Telefone é obrigatório.\n';
+      }
+      else if (!validarTelefone(telefone)) {
+        mensagemErro += 'Por favor, insira um telefone válido no formato (XX) XXXXX-XXXX.\n';
       }
 
       if (mensagemErro) {
@@ -56,6 +62,15 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
+     function validarEmail(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+
+    function validarTelefone(telefone) {
+      const regex = /^\(\d{2}\) \d{5}-\d{4}$/;
+      return regex.test(telefone);
+    }
   
   };
 

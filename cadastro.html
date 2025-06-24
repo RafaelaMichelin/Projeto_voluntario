@@ -111,24 +111,8 @@
     <p>&copy; 2025 | Unicausa</p>
   </footer>
 
-    <script src='js/main.js'></script>
+    <script src='js/cadastro.js'></script>
 
-<script>
-    document.getElementById('formcad').addEventListener('submit', function (e) {
-    e.preventDefault(); // Impede o envio do formulário
-
-    // Cria um objeto FormData a partir do formulário
-    const formData = new FormData(this);
-
-    // Converte os dados do FormData para um objeto
-    const dados = Object.fromEntries(formData.entries());
-
-    // Armazena os dados no localStorage
-    localStorage.setItem('dadosFormulario', JSON.stringify(dados));
-
-    // Redireciona para a página de exibição
-    window.location.href = 'view.html';
-});
 
 </script>
 </body>

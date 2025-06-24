@@ -6,7 +6,7 @@
     <title>Necessidades</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
-    <script src='js/main.js'></script>
+    
 
 
     <style>
@@ -62,34 +62,8 @@
 <footer class="footer">
     <p>&copy; 2025 | Unicausa</p>
   </footer>
-<script>
-window.onload = function () {
-    const dados = JSON.parse(localStorage.getItem('dadosFormulario'));
-    const container = document.getElementById('cards');
 
-    if (dados) {
-        const card = document.createElement('div');
-        card.classList.add('card');
-        card.innerHTML = `
-            <div class="card-header">${dados.titulo}</div>
-            <div class="card-body">
-                <p><strong>Instituição:</strong> ${dados.nome}</p>
-                <p><strong>Tipo de Ajuda:</strong> ${dados.opcaoAjuda}</p>
-                <p><strong>CEP:</strong> ${dados.cep}</p>
-                <p><strong>Rua:</strong> ${dados.rua}</p>
-                <p><strong>Bairro:</strong> ${dados.bairro}</p>
-                <p><strong>Cidade:</strong> ${dados.cidade}</p>
-                <p><strong>Estado:</strong> ${dados.estado}</p>
-                <p><strong>E-mail:</strong> ${dados.email}</p>
-                <p><strong>Telefone:</strong> ${dados.tel}</p>
-            </div>
-        `;
-        container.appendChild(card);
-    } else {
-        container.innerHTML = '<p class="text-center">Nenhuma necessidade cadastrada.</p>';
-    }
-};
-</script>
+  <script src='js/view.js'></script>
 
      </body>
 </html>

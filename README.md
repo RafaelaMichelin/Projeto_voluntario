@@ -31,7 +31,7 @@
 
 <h2> :gear: Executar</h2>
 <p> O projeto está hospedado no Github Pages e pode ser acessado a partir do link abaixo</p>
-<p>Link de acesso: </p>
+<p>Link de acesso: https://rafaelamichelin.github.io/Projeto_voluntario/index.html </p>
 
 <h2> :mag: Demonstração fluxo de páginas</h2>
 

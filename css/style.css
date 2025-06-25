@@ -118,7 +118,7 @@ display: block;
 
 .form-linha label {
   width: 150px;
-  text-align: right;
+  text-align: start;
   font-weight: 600;
 }
 
@@ -222,3 +222,83 @@ display: block;
   
 }
 
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .direita nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.5rem 0;
+    }
+
+    .meu-container {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .conteudo, .logo {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .conteudo h2 {
+        font-size: 32px;
+    }
+
+    .conteudo p {
+        font-size: 18px;
+    }
+
+    .form-linha {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-linha label {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .conteudo h2 {
+        font-size: 26px;
+    }
+
+    .conteudo p {
+        font-size: 16px;
+    }
+
+    .esquerda h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+     footer {
+        font-size: 0.9rem;
+        padding: 0.8rem 0;
+    }
+      .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

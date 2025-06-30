@@ -10,7 +10,7 @@
 - Cadastro de necessidades: formulário para deifinição de demandas locais.
 - Visualização de necessidades: visualizar as necessidades que foram cadastradas.
 - Filtro de pesquisa: dropdown que mostra os itens conforme o que for inserido.
-- Design Responsivel: compatibilidade entre telas de diferentes tamanhos.
+- Design Responsivo: compatibilidade entre telas de diferentes tamanhos.
 - Consistência Visual: cabeçalho, rodapé, cores, fontes padronizadas.
 
 <h2> :space_invader: Tecnologias utilizadas:</h2>
@@ -32,7 +32,7 @@
 <h2> :gear: Executar</h2>
 <p> O projeto está hospedado no Github Pages e pode ser acessado a partir do link abaixo</p>
 <p>Link de acesso: https://rafaelamichelin.github.io/Projeto_voluntario/index.html </p>
-<p>Link para clonar: https://github.com/RafaelaMichelin/Projeto_voluntario.git </p>
+<p>Link para realizar a clonagem: https://github.com/RafaelaMichelin/Projeto_voluntario.git </p>
 
 <h2> :mag: Demonstração fluxo de páginas</h2>
 
